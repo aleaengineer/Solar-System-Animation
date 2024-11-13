@@ -16,7 +16,7 @@ This project creates a visual representation of the solar system with the Sun at
 1. **Clone or Download the Repository**:
    You can clone this repository using Git:
    ```bash
-   git clone https://github.com/your-username/solar-system-animation.git
+   git clone https://github.com/aleaengineer/solar-system-animation.git
    ```
    Or simply download the files as a ZIP.
 
