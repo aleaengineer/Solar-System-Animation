@@ -1,0 +1,242 @@
+/* Styling dasar */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Efek Milky Way (Bima Sakti) */
+.milky-way {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    filter: blur(30px);
+    opacity: 0.5;
+    animation: rotateMilkyWay 120s linear infinite;
+}
+
+@keyframes rotateMilkyWay {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bintang di latar belakang */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Matahari di pusat tata surya */
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.8);
+}
+
+/* Orbit */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+/* Planet */
+.planet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: center -50%;
+    border-radius: 50%;
+}
+
+/* Ukuran dan warna planet serta orbit mereka */
+.mercury {
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    animation: orbit 3s linear infinite;
+}
+
+.venus {
+    width: 12px;
+    height: 12px;
+    background-color: orange;
+    animation: orbit 4s linear infinite;
+}
+
+.earth {
+    width: 14px;
+    height: 14px;
+    background-color: blue;
+    animation: orbit 5s linear infinite;
+}
+
+.mars {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: orbit 6s linear infinite;
+}
+
+.jupiter {
+    width: 25px;
+    height: 25px;
+    background-color: brown;
+    animation: orbit 8s linear infinite;
+}
+
+.saturn {
+    width: 22px;
+    height: 22px;
+    background-color: lightyellow;
+    animation: orbit 10s linear infinite;
+}
+
+.uranus {
+    width: 18px;
+    height: 18px;
+    background-color: lightblue;
+    animation: orbit 12s linear infinite;
+}
+
+.neptune {
+    width: 16px;
+    height: 16px;
+    background-color: darkblue;
+    animation: orbit 14s linear infinite;
+}
+
+/* Ukuran orbit planet */
+.orbit-mercury {
+    width: 120px;
+    height: 120px;
+}
+
+.orbit-venus {
+    width: 180px;
+    height: 180px;
+}
+
+.orbit-earth {
+    width: 240px;
+    height: 240px;
+}
+
+.orbit-mars {
+    width: 300px;
+    height: 300px;
+}
+
+.orbit-jupiter {
+    width: 400px;
+    height: 400px;
+}
+
+.orbit-saturn {
+    width: 480px;
+    height: 480px;
+}
+
+.orbit-uranus {
+    width: 560px;
+    height: 560px;
+}
+
+.orbit-neptune {
+    width: 640px;
+    height: 640px;
+}
+
+/* Bulan */
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(200, 200, 200, 0.8);
+    transform-origin: -50px;
+    animation: orbitMoon 2s linear infinite;
+}
+
+/* Animasi orbit planet dan bulan */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animasi orbit Bulan */
+@keyframes orbitMoon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efek meteor */
+.meteor {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(150vh) translateX(100vw);
+        opacity: 0;
+    }
+}
